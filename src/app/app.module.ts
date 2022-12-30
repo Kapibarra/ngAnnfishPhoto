@@ -8,6 +8,8 @@ import { GalleryComponent } from './homepage/shared/components/gallery/gallery.c
 import { HeaderComponent } from './homepage/shared/components/header/header.component';
 import { FormComponent } from './homepage/shared/components/form/form.component';
 import { LoginComponent } from './homepage/shared/components/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { LoginComponent } from './homepage/shared/components/login/login.compone
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+        HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -70,11 +70,11 @@ export class LoginComponent implements OnInit {
             .pipe(first())
             .subscribe({
                 next: () => {
-                    this.alertService.success('User saved', { keepAfterRouteChange: true });
+                    this.AlertService.success('User saved', { keepAfterRouteChange: true });
                     this.router.navigateByUrl('/users');
                 },
                 error: error => {
-                    this.alertService.error(error);
+                    this.AlertService.error(error);
                     this.submitting = false;
                 }
             })
@@ -83,7 +83,7 @@ export class LoginComponent implements OnInit {
     private saveUser() {
         // create or update user based on id param
         return this.id
-            ? this.accountService.update(this.id!, this.form.value)
-            : this.accountService.register(this.form.value);
+            ? this.AccountService.update(this.id!, this.form.value)
+            : this.AccountService.register(this.form.value);
     }
 }
