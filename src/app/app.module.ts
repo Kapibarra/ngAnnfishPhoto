@@ -5,22 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { GalleryComponent } from './homepage/shared/components/gallery/gallery.component';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { AdminPageComponent } from './admin-page/admin-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     GalleryComponent,
-    LoginPageComponent,
-    AdminPageComponent
+    HeaderComponent,
+    FormComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
