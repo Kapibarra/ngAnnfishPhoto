@@ -1,101 +1,131 @@
-<div class="slide slide--layout-1 slide--current">
-  <figure class="slide__figure">
-    <div class="slide__figure-inner">
-      <div
-        class="slide__figure-img"
-        style="background-image: url(../../../../../assets/img/1.jpg)"
-      ></div>
-      <div class="slide__figure-reveal"></div>
+<div
+  fullpage
+  id="fullpage"
+  [options]="config"
+  (ref)="getRef($event)"
+  #fullpageRef
+>
+  <div class="section">
+    <div class="slide slide--layout-2">
+      <figure class="slide__figure">
+        <div class="slide__figure-inner">
+          <div
+            class="slide__figure-img"
+            style="background-image: url(../../../../../assets/img/5.jpg)"
+          ></div>
+          <div class="slide__figure-reveal"></div>
+        </div>
+        <figcaption>
+          <h3 class="slide__figure-title">Carajillo percolator</h3>
+          <p class="slide__figure-description">White sugar plunger pot half</p>
+        </figcaption>
+      </figure>
+      <figure class="slide__figure">
+        <div class="slide__figure-inner">
+          <div
+            class="slide__figure-img"
+            style="background-image: url(../../../../../assets/img/6.jpg)"
+          ></div>
+          <div class="slide__figure-reveal"></div>
+        </div>
+        <figcaption>
+          <h3 class="slide__figure-title">Cortado organic skinny</h3>
+          <p class="slide__figure-description">As aromatic, grinder turkish</p>
+        </figcaption>
+      </figure>
+      <figure class="slide__figure">
+        <div class="slide__figure-inner">
+          <div
+            class="slide__figure-img"
+            style="background-image: url(../../../../../assets/img/7.jpg)"
+          ></div>
+          <div class="slide__figure-reveal"></div>
+        </div>
+        <figcaption>
+          <h3 class="slide__figure-title">Qui coffee, americano</h3>
+          <p class="slide__figure-description">Espresso percolator iced rich</p>
+        </figcaption>
+      </figure>
     </div>
-    <figcaption>
-      <h3 class="slide__figure-title">Black cappuccino sugar</h3>
-      <p class="slide__figure-description">
-        Plunger pot dripper crema sit coffee
-      </p>
-    </figcaption>
-  </figure>
-  <figure class="slide__figure">
-    <div class="slide__figure-inner">
-      <div
-        class="slide__figure-img"
-        style="background-image: url(../../../../../assets/img/2.jpg)"
-      ></div>
-      <div class="slide__figure-reveal"></div>
+  </div>
+  <div class="section">
+    <div class="slide slide--layout-1 slide--current">
+      <figure class="slide__figure">
+        <div class="slide__figure-inner">
+          <div
+            class="slide__figure-img"
+            style="background-image: url(../../../../../assets/img/1.jpg)"
+          ></div>
+          <div class="slide__figure-reveal"></div>
+        </div>
+        <figcaption>
+          <h3 class="slide__figure-title">Black cappuccino sugar</h3>
+          <p class="slide__figure-description">
+            Plunger pot dripper crema sit coffee
+          </p>
+        </figcaption>
+      </figure>
+      <figure class="slide__figure">
+        <div class="slide__figure-inner">
+          <div
+            class="slide__figure-img"
+            style="background-image: url(../../../../../assets/img/2.jpg)"
+          ></div>
+          <div class="slide__figure-reveal"></div>
+        </div>
+        <figcaption>
+          <h3 class="slide__figure-title">Cup white foam</h3>
+          <p class="slide__figure-description">Mug that steamed to go</p>
+        </figcaption>
+      </figure>
+      <figure class="slide__figure">
+        <div class="slide__figure-inner">
+          <div
+            class="slide__figure-img"
+            style="background-image: url(../../../../../assets/img/3.jpg)"
+          ></div>
+          <div class="slide__figure-reveal"></div>
+        </div>
+        <figcaption>
+          <h3 class="slide__figure-title">Aroma mocha</h3>
+          <p class="slide__figure-description">Foam trifecta</p>
+        </figcaption>
+      </figure>
+      <figure class="slide__figure">
+        <div class="slide__figure-inner">
+          <div
+            class="slide__figure-img"
+            style="background-image: url(../../../../../assets/img/4.jpg)"
+          ></div>
+          <div class="slide__figure-reveal"></div>
+        </div>
+        <figcaption>
+          <h3 class="slide__figure-title">Seasonal et dripper</h3>
+          <p class="slide__figure-description">
+            Trifecta foam, con panna caffeine
+          </p>
+        </figcaption>
+      </figure>
     </div>
-    <figcaption>
-      <h3 class="slide__figure-title">Cup white foam</h3>
-      <p class="slide__figure-description">Mug that steamed to go</p>
-    </figcaption>
-  </figure>
-  <figure class="slide__figure">
-    <div class="slide__figure-inner">
-      <div
-        class="slide__figure-img"
-        style="background-image: url(../../../../../assets/img/3.jpg)"
-      ></div>
-      <div class="slide__figure-reveal"></div>
+
+    <button (click)="addSection()">Add sections and change color</button>
+    <button (click)="fullpage_api.moveSectionDown()">Move down</button>
+    <button (click)="removeLast()">Remove last</button>
+  </div>
+  <div class="section">
+    <div class="slide"><h1>Slide 3.1</h1></div>
+    <div class="slide"><h1>Slide 3.2</h1></div>
+    <div class="slide">
+      <h1>Slide 3.3</h1>
+      <a routerLink="secondTest">name</a>
     </div>
-    <figcaption>
-      <h3 class="slide__figure-title">Aroma mocha</h3>
-      <p class="slide__figure-description">Foam trifecta</p>
-    </figcaption>
-  </figure>
-  <figure class="slide__figure">
-    <div class="slide__figure-inner">
-      <div
-        class="slide__figure-img"
-        style="background-image: url(../../../../../assets/img/4.jpg)"
-      ></div>
-      <div class="slide__figure-reveal"></div>
-    </div>
-    <figcaption>
-      <h3 class="slide__figure-title">Seasonal et dripper</h3>
-      <p class="slide__figure-description">Trifecta foam, con panna caffeine</p>
-    </figcaption>
-  </figure>
-  <span class="slide__number slide__number--left">1</span>
-  <span class="slide__number slide__number--right">2</span>
-</div>
-<div class="slide slide--layout-2">
-  <figure class="slide__figure">
-    <div class="slide__figure-inner">
-      <div
-        class="slide__figure-img"
-        style="background-image: url(../../../../../assets/img/5.jpg)"
-      ></div>
-      <div class="slide__figure-reveal"></div>
-    </div>
-    <figcaption>
-      <h3 class="slide__figure-title">Carajillo percolator</h3>
-      <p class="slide__figure-description">White sugar plunger pot half</p>
-    </figcaption>
-  </figure>
-  <figure class="slide__figure">
-    <div class="slide__figure-inner">
-      <div
-        class="slide__figure-img"
-        style="background-image: url(../../../../../assets/img/6.jpg)"
-      ></div>
-      <div class="slide__figure-reveal"></div>
-    </div>
-    <figcaption>
-      <h3 class="slide__figure-title">Cortado organic skinny</h3>
-      <p class="slide__figure-description">As aromatic, grinder turkish</p>
-    </figcaption>
-  </figure>
-  <figure class="slide__figure">
-    <div class="slide__figure-inner">
-      <div
-        class="slide__figure-img"
-        style="background-image: url(../../../../../assets/img/7.jpg)"
-      ></div>
-      <div class="slide__figure-reveal"></div>
-    </div>
-    <figcaption>
-      <h3 class="slide__figure-title">Qui coffee, americano</h3>
-      <p class="slide__figure-description">Espresso percolator iced rich</p>
-    </figcaption>
-  </figure>
-  <span class="slide__number slide__number--left">3</span>
-  <span class="slide__number slide__number--right">4</span>
+  </div>
+  <div class="section">
+    <h1>Section 4</h1>
+    <button (click)="addSection()">Add sections and change color</button>
+    <button (click)="fullpage_api.moveTo('secondPage', 2)">
+      Move to second page
+    </button>
+    <button (click)="removeLast()">Remove last</button>
+  </div>
 </div>
