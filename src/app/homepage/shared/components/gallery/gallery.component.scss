@@ -1,0 +1,208 @@
+.hidden {
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.message {
+  background: #000;
+  color: #fbaf5d;
+  padding: 0.5rem;
+  margin: 0;
+  text-align: center;
+}
+
+/* Icons */
+.icon {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0 auto;
+  fill: currentColor;
+}
+
+.codrops-header {
+  padding: 2rem;
+}
+
+.codrops-header__title {
+  font-size: inherit;
+  font-weight: normal;
+}
+
+.codrops-header__links a {
+  text-transform: lowercase;
+  display: inline-block;
+  margin: 0 0.75rem 0 0;
+}
+
+.arrow-nav,
+.nav {
+  display: none;
+}
+
+.slide__figure-title {
+  font-weight: normal;
+  margin: 0.5rem 0 0 0;
+  font-size: inherit;
+}
+
+.slide__figure-title::before {
+  content: "\2015";
+  display: inline-block;
+  margin: 0 0.5rem 0 0;
+}
+
+.slide__figure-description {
+  margin: 0;
+  font-style: italic;
+  color: var(--color-text-alt);
+}
+
+.slide__figure {
+  display: flex;
+  height: 250px;
+  width: calc(100vw - 3rem);
+  max-width: 500px;
+  margin: 0 auto 2rem auto;
+  flex-direction: column;
+}
+
+.slide__figure-inner {
+  flex: 1;
+}
+
+.slide__figure-img {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.slide__number {
+  display: none;
+}
+
+@media screen and (min-width: 53em) {
+  .message {
+    display: none;
+  }
+  body {
+    overflow: hidden;
+  }
+  .codrops-header {
+    padding: 0;
+    top: 1rem;
+    right: calc(1rem + 10px);
+    z-index: 4000;
+  }
+  .codrops-header__title {
+    display: inline;
+  }
+  .codrops-header__links {
+    display: inline;
+  }
+  .codrops-header__links a {
+    margin: 0 0 0 0.75rem;
+  }
+  .slideshow {
+    width: 100vw;
+    height: 100vh;
+  }
+  .slideshow__indicator {
+    width: 10px;
+    background: #334bf7;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    z-index: 100;
+    transform-origin: 0% 50%;
+    z-index: 6000;
+  }
+  .slideshow__indicator:last-child {
+    left: auto;
+    right: 0;
+    transform-origin: 100% 50%;
+  }
+  .slide {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    pointer-events: none;
+    display: grid;
+    grid-area: 2 / 1 / 3 / 2;
+    padding: 4vh calc(3vw + 20px);
+    --gridgap: 1vw;
+    --gridwidth: 100%;
+    --gridheight: 100%;
+    display: grid;
+    width: var(--gridwidth);
+    height: var(--gridheight);
+    grid-template-rows: repeat(
+      20,
+      calc(var(--gridheight) / 20 - var(--gridgap))
+    );
+    grid-template-columns: repeat(
+      20,
+      calc(var(--gridwidth) / 20 - var(--gridgap))
+    );
+    grid-gap: var(--gridgap);
+    align-content: center;
+    justify-content: center;
+    background-color: #fff;
+  }
+  .slide--layout-1 .slide__figure:first-child {
+    grid-area: 2 / 2 / 14 / 10;
+  }
+  .slide--layout-1 .slide__figure:nth-child(2) {
+    grid-area: 2 / 17 / 9 / 21;
+  }
+  .slide--layout-1 .slide__figure:nth-child(3) {
+    grid-area: 14 / 6 / 21 / 9;
+  }
+  .slide--layout-1 .slide__figure:nth-child(4) {
+    grid-area: 11 / 12 / 21 / 18;
+  }
+  .slide--layout-2 .slide__figure:first-child {
+    grid-area: 4 / 1 / 18 / 10;
+  }
+  .slide--layout-2 .slide__figure:nth-child(2) {
+    grid-area: 2 / 12 / 9 / 18;
+  }
+  .slide--layout-2 .slide__figure:nth-child(3) {
+    grid-area: 10 / 16 / 21 / 21;
+  }
+  .slide--layout-3 .slide__figure:first-child {
+    grid-area: 3 / 6 / 8 / 10;
+  }
+  .slide--layout-3 .slide__figure:nth-child(2) {
+    grid-area: 2 / 14 / 9 / 21;
+  }
+  .slide--layout-3 .slide__figure:nth-child(3) {
+    grid-area: 10 / 2 / 18 / 10;
+  }
+  .slide--layout-3 .slide__figure:nth-child(4) {
+    grid-area: 11 / 12 / 21 / 18;
+  }
+  .slide--layout-4 .slide__figure:first-child {
+    grid-area: 1 / 6 / 8 / 10;
+  }
+  .slide--layout-4 .slide__figure:nth-child(2) {
+    grid-area: 3 / 12 / 10 / 18;
+  }
+  .slide--layout-4 .slide__figure:nth-child(3) {
+    grid-area: 11 / 4 / 21 / 9;
+  }
+  .slide--layout-4 .slide__figure:nth-child(4) {
+    grid-area: 13 / 12 / 21 / 18;
+  }
+  .slide--layout-5 .slide__figure:first-child {
+    grid-area: 5 / 1 / 18 / 10;
+  }
+  .slide--layout-5 .slide__figure:nth-child(2) {
+    grid-area: 5 / 12 / 18 / 21;
+  }
+}
