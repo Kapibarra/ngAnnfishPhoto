@@ -1,3 +1,4 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import {
   Component,
   ElementRef,
@@ -10,6 +11,14 @@ import {
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss'],
+  animations: [
+    trigger('fadeIn', [ 
+      transition('void => *', [
+        style({ opacity: 0 }), 
+        animate(2000, style({opacity: 1}))
+      ]) 
+    ])
+  ]
 })
 export class GalleryComponent implements OnInit {
   @ViewChild('fullpageRef') fp_directive: ElementRef | any;

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +28,8 @@ import { LoginComponent } from './homepage/shared/components/login/login.compone
     ReactiveFormsModule,
     HttpClientModule,
     AngularFullpageModule,
+    BrowserAnimationsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent],
