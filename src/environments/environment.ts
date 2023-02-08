@@ -4,7 +4,14 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:4000'
+  apiUrl: 'http://localhost:4000',
+  apiKey: "AIzaSyBxtgcAiosvkxQOGfxiH1vv-dpZ5GgzdWE",
+  authDomain: "annfish-eb385.firebaseapp.com",
+  projectId: "annfish-eb385",
+  storageBucket: "annfish-eb385.appspot.com",
+  messagingSenderId: "288039465595",
+  appId: "1:288039465595:web:0b54a562559f22d1c0a8de"
+
 };
 
 /*
