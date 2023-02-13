@@ -12,11 +12,11 @@ import {
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss'],
   animations: [
-    trigger('fadeIn', [ 
+    trigger('fadeIn', [
       transition('void => *', [
-        style({ opacity: 0 }), 
-        animate(2000, style({opacity: 1}))
-      ]) 
+        style({ opacity: 0 }),
+        animate(2000, style({ opacity: 1 }))
+      ])
     ])
   ]
 })
@@ -26,10 +26,7 @@ export class GalleryComponent implements OnInit {
   fullpage_api: any;
 
   constructor(private renderer: Renderer2) {
-    // for more details on config options please visit fullPage.js docs
     this.config = {
-      // fullpage options
-      licenseKey: 'YOUR LICENSE KEY HERE',
       anchors: [
         'firstPage',
         'secondPage',
@@ -38,10 +35,8 @@ export class GalleryComponent implements OnInit {
         'lastPage',
       ],
       menu: '#menu',
-      navigation: true,
+      navigation: false,
       sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-
-      // fullpage callbacks
       afterResize: () => {
         console.log('After resize');
       },
@@ -85,5 +80,5 @@ export class GalleryComponent implements OnInit {
   randomColor() {
     return '#' + Math.random().toString(16).slice(-3);
   }
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }

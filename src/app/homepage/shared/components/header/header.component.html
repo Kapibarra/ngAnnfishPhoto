@@ -1,12 +1,12 @@
-<div class="header__wrapper">
+<div class="header__wrapper" [ngClass]="{ sticky: isSticky, filled: isFilled }">
     <div class="header">
         <a routerLink="/">
             <div class="header__logo">
-                <img >
+                <img>
             </div>
         </a>
-        
-        <div class="header__nav">
+
+        <div class="header__nav" *ngIf="!mobile">
             <ul class="header__nav-ul">
                 <li>main</li>
                 <li>contacts</li>
