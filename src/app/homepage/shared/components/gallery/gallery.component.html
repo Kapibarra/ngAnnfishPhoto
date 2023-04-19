@@ -1,11 +1,11 @@
 <div
-  class="grid-container"
+  class="grid__gallery-container"
   [style.grid-template-columns]="gridColumns"
   [style.grid-template-rows]="gridRows"
 >
   <div
     *ngFor="let item of photos; let i = index"
-    class="grid-item"
+    class="grid__gallery-item"
     [ngStyle]="{ 'grid-column': item.gridColumn, 'grid-row': item.gridRow }"
   >
     <img src="{{ item.src }}" (click)="onPhotoClick(item)" [alt]="item.alt" />
@@ -26,7 +26,11 @@
     <swiper [config]="config">
       <ng-container *ngFor="let innerPhoto of selectedPhoto.seriesPhotos">
         <ng-template swiperSlide *ngIf="innerPhoto.src">
-          <img [src]="innerPhoto.src" [alt]="innerPhoto.alt" />
+          <img
+            [src]="innerPhoto.src"
+            [alt]="innerPhoto.alt"
+            class="popup__content-item"
+          />
         </ng-template>
       </ng-container>
     </swiper>

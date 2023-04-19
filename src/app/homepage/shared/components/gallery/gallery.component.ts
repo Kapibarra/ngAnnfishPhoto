@@ -26,27 +26,27 @@ SwiperCore.use([Navigation, Autoplay]);
 export class GalleryComponent implements OnInit {
   photos = [
     {
-      src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+      src: 'assets/series/01/01.jpg',
       alt: 'Balancing Act',
       id: 1,
       category: 'Fashion',
-      gridColumn: '1 / 3', // occupies columns 1 and 2
+      gridColumn: '1 / 2', // occupies columns 1 and 2
       gridRow: '1 / 2', // occupies row 1
       seriesPhotos: [
         {
-          src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+          src: 'assets/series/01/01.jpg',
         },
         {
-          src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+          src: 'assets/series/01/02.jpg',
         },
         {
-          src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+          src: 'assets/series/01/03.jpg',
         },
         {
-          src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+          src: 'assets/series/01/04.jpg',
         },
         {
-          src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+          src: 'assets/series/01/05.jpg',
         },
       ],
     },
