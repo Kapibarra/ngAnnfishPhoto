@@ -1,80 +1,88 @@
-import {
-  Component,
-  ElementRef,
-  OnInit,
-  Renderer2,
-  ViewChild,
-} from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import SwiperCore, { SwiperOptions, Navigation, Autoplay } from 'swiper';
+// install Swiper modules
+SwiperCore.use([Navigation, Autoplay]);
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss'],
 })
 export class GalleryComponent implements OnInit {
-  @ViewChild('fullpageRef') fp_directive: ElementRef | any;
-  config;
-  fullpage_api: any;
-
-  constructor(private renderer: Renderer2) {
-    // for more details on config options please visit fullPage.js docs
-    this.config = {
-      // fullpage options
-      licenseKey: 'YOUR LICENSE KEY HERE',
-      anchors: [
-        'firstPage',
-        'secondPage',
-        'thirdPage',
-        'fourthPage',
-        'lastPage',
+  photos = [
+    {
+      src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+      alt: 'Balancing Act',
+      id: 1,
+      category: 'Fashion',
+      gridColumn: '1 / 3', // occupies columns 1 and 2
+      gridRow: '1 / 2', // occupies row 1
+      seriesPhotos: [
+        {
+          src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+        },
+        {
+          src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+        },
+        {
+          src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+        },
+        {
+          src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+        },
+        {
+          src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+        },
       ],
-      menu: '#menu',
-      navigation: true,
-      sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+    },
+    {
+      src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-5-1050x750.jpg',
+      alt: 'Puck',
+      id: 2,
+      category: 'Fashion',
+      gridColumn: '3 / 5', // occupies columns 3, 4, and 5
+      gridRow: '1 / 3', // occupies rows 1 and 2
+      seriesPhotos: [
+        {
+          src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+        },
+        {
+          src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+        },
+        {
+          src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+        },
+        {
+          src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+        },
+        {
+          src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+        },
+      ],
+    },
+  ];
+  gridRows: any;
+  gridColumns: any;
+  config: SwiperOptions = {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: false,
+    navigation: false,
+    pagination: { clickable: true },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+  };
+  constructor() {}
 
-      // fullpage callbacks
-      afterResize: () => {
-        console.log('After resize');
-      },
-      afterLoad: (origin: any, destination: any, direction: any) => {
-        console.log(origin.index);
-      },
-    };
+  selectedPhoto: any; // holds data for the currently selected photo
+
+  onPhotoClick(photo: any) {
+    this.selectedPhoto = photo;
   }
 
-  getRef(fullPageRef: any) {
-    this.fullpage_api = fullPageRef;
-  }
-
-  addSection() {
-    // change background color
-    this.config['sectionsColor'] = Array(6)
-      .fill(0)
-      .map((x) => this.randomColor());
-
-    // creating the section div
-    const section = this.renderer.createElement('div');
-    this.renderer.addClass(section, 'section');
-    this.renderer.setProperty(section, 'innerHTML', '<h3>New Section</h3>');
-    // adding section
-    this.renderer.appendChild(this.fp_directive.nativeElement, section);
-
-    this.fullpage_api.build();
-  }
-
-  removeLast() {
-    const lastSection = this.fp_directive.nativeElement.lastChild;
-
-    if (lastSection.isEqualNode(this.fullpage_api.getActiveSection().item)) {
-      this.fullpage_api.moveSectionUp();
-    }
-    lastSection.remove();
-
-    this.fullpage_api.build();
-  }
-
-  randomColor() {
-    return '#' + Math.random().toString(16).slice(-3);
+  closePhotoPopup() {
+    this.selectedPhoto = null;
   }
   ngOnInit(): void {}
 }

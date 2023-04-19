@@ -11,7 +11,7 @@ import { FormComponent } from './homepage/shared/components/form/form.component'
 import { GalleryComponent } from './homepage/shared/components/gallery/gallery.component';
 import { HeaderComponent } from './homepage/shared/components/header/header.component';
 import { LoginComponent } from './homepage/shared/components/login/login.component';
-
+import { SwiperModule } from 'swiper/angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +27,7 @@ import { LoginComponent } from './homepage/shared/components/login/login.compone
     ReactiveFormsModule,
     HttpClientModule,
     AngularFullpageModule,
+    SwiperModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

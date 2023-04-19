@@ -1,4 +1,31 @@
 <div
+  class="grid-container"
+  [style.grid-template-columns]="gridColumns"
+  [style.grid-template-rows]="gridRows"
+>
+  <div
+    *ngFor="let item of photos; let i = index"
+    class="grid-item"
+    [ngStyle]="{ 'grid-column': item.gridColumn, 'grid-row': item.gridRow }"
+  >
+    <img src="{{ item.src }}" (click)="onPhotoClick(item)" [alt]="item.alt" />
+  </div>
+</div>
+<div class="photo-popup" *ngIf="selectedPhoto">
+  <div class="photo-popup-content">
+    <swiper [config]="config">
+      <ng-container *ngFor="let innerPhoto of selectedPhoto.seriesPhotos">
+        <ng-template swiperSlide *ngIf="innerPhoto.src">
+          <img [src]="innerPhoto.src" [alt]="innerPhoto.alt" />
+        </ng-template>
+      </ng-container>
+    </swiper>
+    <p>{{ selectedPhoto.category }}</p>
+    <button (click)="closePhotoPopup()">Close</button>
+  </div>
+</div>
+
+<!-- <div
   fullpage
   id="fullpage"
   [options]="config"
@@ -128,4 +155,4 @@
     </button>
     <button (click)="removeLast()">Remove last</button>
   </div>
-</div>
+</div> -->
