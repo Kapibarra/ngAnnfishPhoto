@@ -1,13 +1,10 @@
-<div
-  class="grid__gallery-container"
+<!-- [ngStyle]="{ 'grid-column': item.gridColumn, 'grid-row': item.gridRow }" 
   [style.grid-template-columns]="gridColumns"
   [style.grid-template-rows]="gridRows"
->
-  <div
-    *ngFor="let item of photos; let i = index"
-    class="grid__gallery-item"
-    [ngStyle]="{ 'grid-column': item.gridColumn, 'grid-row': item.gridRow }"
-  >
+-->
+
+<div class="grid__gallery-container">
+  <div *ngFor="let item of photos; let i = index" class="grid__gallery-item">
     <img src="{{ item.src }}" (click)="onPhotoClick(item)" [alt]="item.alt" />
   </div>
 </div>

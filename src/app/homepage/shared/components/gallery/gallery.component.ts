@@ -51,7 +51,7 @@ export class GalleryComponent implements OnInit {
       ],
     },
     {
-      src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-5-1050x750.jpg',
+      src: 'assets/series/02/01.jpg',
       alt: 'Puck',
       id: 2,
       category: 'Fashion',
@@ -59,23 +59,37 @@ export class GalleryComponent implements OnInit {
       gridRow: '1 / 3', // occupies rows 1 and 2
       seriesPhotos: [
         {
-          src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+          src: 'assets/series/02/01.jpg',
         },
         {
-          src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+          src: 'assets/series/02/02.jpg',
         },
         {
-          src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+          src: 'assets/series/02/03.jpg',
         },
         {
-          src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+          src: 'assets/series/02/04.jpg',
         },
         {
-          src: 'https://anoukhart.com/wp-content/uploads/2023/03/Anouk_Hart-1-560x700.jpg',
+          src: 'assets/series/02/05.jpg',
+        },
+        {
+          src: 'assets/series/02/06.jpg',
+        },
+        {
+          src: 'assets/series/02/07.jpg',
+        },
+        {
+          src: 'assets/series/02/08.jpg',
+        },
+        {
+          src: 'assets/series/02/09.jpg',
         },
       ],
     },
   ];
+
+  loading: boolean = true;
   gridRows: any;
   popupState: string = 'hidden';
   gridColumns: any;
@@ -90,6 +104,7 @@ export class GalleryComponent implements OnInit {
       disableOnInteraction: false,
     },
   };
+  loaded: boolean = false;
   constructor() {}
 
   selectedPhoto: any; // holds data for the currently selected photo
@@ -104,6 +119,12 @@ export class GalleryComponent implements OnInit {
     setTimeout(() => {
       this.selectedPhoto = null;
     }, 300);
+  }
+  onSelectedPhotoLoad() {
+    this.loading = false;
+    setTimeout(() => {
+      this.loaded = true;
+    }, 3000);
   }
   ngOnInit(): void {}
 }
