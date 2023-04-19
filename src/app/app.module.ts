@@ -12,6 +12,8 @@ import { GalleryComponent } from './homepage/shared/components/gallery/gallery.c
 import { HeaderComponent } from './homepage/shared/components/header/header.component';
 import { LoginComponent } from './homepage/shared/components/login/login.component';
 import { SwiperModule } from 'swiper/angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +30,7 @@ import { SwiperModule } from 'swiper/angular';
     HttpClientModule,
     AngularFullpageModule,
     SwiperModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -11,8 +11,18 @@
     <img src="{{ item.src }}" (click)="onPhotoClick(item)" [alt]="item.alt" />
   </div>
 </div>
-<div class="photo-popup" *ngIf="selectedPhoto">
-  <div class="photo-popup-content">
+<div
+  class="photo__gallery-popup"
+  *ngIf="selectedPhoto"
+  [@popupAnimation]="popupState"
+>
+  <div class="popUp__button-wrapper">
+    <button (click)="closePhotoPopup()" class="popUp__close-button">
+      Закрыть
+    </button>
+  </div>
+
+  <div class="photo__gallery-popup-content">
     <swiper [config]="config">
       <ng-container *ngFor="let innerPhoto of selectedPhoto.seriesPhotos">
         <ng-template swiperSlide *ngIf="innerPhoto.src">
@@ -20,9 +30,8 @@
         </ng-template>
       </ng-container>
     </swiper>
-    <p>{{ selectedPhoto.category }}</p>
-    <button (click)="closePhotoPopup()">Close</button>
   </div>
+  <div class="gallery__popup-overlay"></div>
 </div>
 
 <!-- <div

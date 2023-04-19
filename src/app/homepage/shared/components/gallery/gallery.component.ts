@@ -1,3 +1,11 @@
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
+
 import { Component, OnInit } from '@angular/core';
 import SwiperCore, { SwiperOptions, Navigation, Autoplay } from 'swiper';
 // install Swiper modules
@@ -6,6 +14,14 @@ SwiperCore.use([Navigation, Autoplay]);
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss'],
+  animations: [
+    trigger('popupAnimation', [
+      state('hidden', style({ opacity: 0 })),
+      state('visible', style({ opacity: 1 })),
+      transition('hidden => visible', animate('300ms ease-in')),
+      transition('visible => hidden', animate('300ms ease-out')),
+    ]),
+  ],
 })
 export class GalleryComponent implements OnInit {
   photos = [
@@ -61,6 +77,7 @@ export class GalleryComponent implements OnInit {
     },
   ];
   gridRows: any;
+  popupState: string = 'hidden';
   gridColumns: any;
   config: SwiperOptions = {
     slidesPerView: 3,
@@ -79,10 +96,14 @@ export class GalleryComponent implements OnInit {
 
   onPhotoClick(photo: any) {
     this.selectedPhoto = photo;
+    this.popupState = 'visible';
   }
 
   closePhotoPopup() {
-    this.selectedPhoto = null;
+    this.popupState = 'hidden';
+    setTimeout(() => {
+      this.selectedPhoto = null;
+    }, 300);
   }
   ngOnInit(): void {}
 }
