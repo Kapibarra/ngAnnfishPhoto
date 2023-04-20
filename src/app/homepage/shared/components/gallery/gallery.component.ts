@@ -28,6 +28,7 @@ export class GalleryComponent implements OnInit {
     {
       src: 'assets/series/01/01.jpg',
       alt: 'Balancing Act',
+      paddingRight: this.getRandomPadding(),
       id: 1,
       category: 'Fashion',
       gridColumn: '1 / 2', // occupies columns 1 and 2
@@ -53,6 +54,7 @@ export class GalleryComponent implements OnInit {
     {
       src: 'assets/series/02/01.jpg',
       alt: 'Puck',
+      paddingRight: this.getRandomPadding(),
       id: 2,
       category: 'Fashion',
       gridColumn: '3 / 5', // occupies columns 3, 4, and 5
@@ -87,6 +89,67 @@ export class GalleryComponent implements OnInit {
         },
       ],
     },
+    {
+      src: 'assets/series/03/01.jpg',
+      alt: 'Puck',
+      paddingRight: this.getRandomPadding(),
+      id: 3,
+      category: 'Fashion',
+      gridColumn: '3 / 5', // occupies columns 3, 4, and 5
+      gridRow: '1 / 3', // occupies rows 1 and 2
+      seriesPhotos: [
+        {
+          src: 'assets/series/03/01.jpg',
+        },
+        {
+          src: 'assets/series/03/02.jpg',
+        },
+        {
+          src: 'assets/series/03/03.jpg',
+        },
+        {
+          src: 'assets/series/03/04.jpg',
+        },
+        {
+          src: 'assets/series/03/05.jpg',
+        },
+        {
+          src: 'assets/series/03/06.jpg',
+        },
+        {
+          src: 'assets/series/03/07.jpg',
+        },
+        {
+          src: 'assets/series/03/08.jpg',
+        },
+      ],
+    },
+    {
+      src: 'assets/series/04/01.jpg',
+      alt: 'Puck',
+      id: 4,
+      paddingRight: this.getRandomPadding(),
+      category: 'Fashion',
+      gridColumn: '3 / 5', // occupies columns 3, 4, and 5
+      gridRow: '1 / 3', // occupies rows 1 and 2
+      seriesPhotos: [
+        {
+          src: 'assets/series/04/01.jpg',
+        },
+        {
+          src: 'assets/series/04/02.jpg',
+        },
+        {
+          src: 'assets/series/04/03.jpg',
+        },
+        {
+          src: 'assets/series/04/04.jpg',
+        },
+        {
+          src: 'assets/series/04/05.jpg',
+        },
+      ],
+    },
   ];
 
   loading: boolean = true;
@@ -113,7 +176,9 @@ export class GalleryComponent implements OnInit {
     this.selectedPhoto = photo;
     this.popupState = 'visible';
   }
-
+  getRandomPadding(): number {
+    return Math.floor(Math.random() * 150) + 10; // случайное значение от 10 до 30
+  }
   closePhotoPopup() {
     this.popupState = 'hidden';
     setTimeout(() => {

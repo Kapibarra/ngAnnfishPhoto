@@ -2,6 +2,7 @@
   // display: grid;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   grid-gap: 10px;
   width: 100%;
   max-width: 1660px;
@@ -22,6 +23,7 @@
 .popup__content-item {
   width: 100%;
   max-width: 714px;
+  box-sizing: border-box;
 }
 .photo__gallery-popup {
   position: fixed;
