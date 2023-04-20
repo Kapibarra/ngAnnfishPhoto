@@ -5,7 +5,6 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-
 import { Component, OnInit } from '@angular/core';
 import SwiperCore, { SwiperOptions, Navigation, Autoplay } from 'swiper';
 // install Swiper modules
@@ -150,6 +149,87 @@ export class GalleryComponent implements OnInit {
         },
       ],
     },
+    {
+      src: 'assets/series/05/01.jpg',
+      alt: 'Puck',
+      id: 5,
+      paddingRight: this.getRandomPadding(),
+      category: 'Fashion',
+      gridColumn: '3 / 5', // occupies columns 3, 4, and 5
+      gridRow: '1 / 3', // occupies rows 1 and 2
+      seriesPhotos: [
+        {
+          src: 'assets/series/05/01.jpg',
+        },
+        {
+          src: 'assets/series/05/02.jpg',
+        },
+        {
+          src: 'assets/series/05/03.jpg',
+        },
+        {
+          src: 'assets/series/05/04.jpg',
+        },
+        {
+          src: 'assets/series/05/05.jpg',
+        },
+      ],
+    },
+    {
+      src: 'assets/series/06/01.jpg',
+      alt: 'Puck',
+      id: 6,
+      paddingRight: this.getRandomPadding(),
+      category: 'Fashion',
+      gridColumn: '3 / 5', // occupies columns 3, 4, and 5
+      gridRow: '1 / 3', // occupies rows 1 and 2
+      seriesPhotos: [
+        {
+          src: 'assets/series/06/01.jpg',
+        },
+        {
+          src: 'assets/series/06/02.jpg',
+        },
+        {
+          src: 'assets/series/06/03.jpg',
+        },
+        {
+          src: 'assets/series/06/04.jpg',
+        },
+        {
+          src: 'assets/series/06/05.jpg',
+        },
+      ],
+    },
+    {
+      src: 'assets/series/07/01.jpg',
+      alt: 'Puck',
+      id: 7,
+      paddingRight: this.getRandomPadding(),
+      category: 'Fashion',
+      gridColumn: '3 / 5', // occupies columns 3, 4, and 5
+      gridRow: '1 / 3', // occupies rows 1 and 2
+      seriesPhotos: [
+        {
+          src: 'assets/series/07/01.jpg',
+        },
+        {
+          src: 'assets/series/07/02.jpg',
+        },
+        {
+          src: 'assets/series/07/03.jpg',
+        },
+        {
+          src: 'assets/series/07/04.jpg',
+        },
+        {
+          src: 'assets/series/07/05.jpg',
+        },
+        {
+          src: 'assets/series/07/06.jpg',
+        },
+      ],
+    },
   ];
 
   loading: boolean = true;
@@ -166,18 +246,39 @@ export class GalleryComponent implements OnInit {
       delay: 5000,
       disableOnInteraction: false,
     },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.1,
+        spaceBetween: 10,
+      },
+      415: {
+        slidesPerView: 2.1,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 3.1,
+        spaceBetween: 20,
+      },
+    },
   };
   loaded: boolean = false;
   constructor() {}
 
-  selectedPhoto: any; // holds data for the currently selected photo
+  selectedPhoto: any;
 
   onPhotoClick(photo: any) {
     this.selectedPhoto = photo;
     this.popupState = 'visible';
   }
-  getRandomPadding(): number {
-    return Math.floor(Math.random() * 150) + 10; // случайное значение от 10 до 30
+  getRandomPadding(): string {
+    if (window.innerWidth <= 1024) {
+      return '0';
+    }
+    const top = Math.floor(Math.random() * 70) + 10;
+    const right = Math.floor(Math.random() * 50) + 10;
+    const bottom = Math.floor(Math.random() * 40) + 10;
+    const left = Math.floor(Math.random() * 110) + 10;
+    return `${top}px ${right}px ${bottom}px ${left}px`;
   }
   closePhotoPopup() {
     this.popupState = 'hidden';

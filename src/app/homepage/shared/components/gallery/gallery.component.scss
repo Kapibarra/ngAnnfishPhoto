@@ -3,11 +3,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  grid-gap: 10px;
+  gap: 20px;
   width: 100%;
   max-width: 1660px;
   margin: 0 auto;
   height: 100%;
+  & .grid__gallery-item {
+    margin-bottom: 50px;
+  }
   & .grid__gallery-item img {
     width: 100%;
     max-width: 500px;
@@ -23,6 +26,7 @@
 .popup__content-item {
   width: 100%;
   max-width: 714px;
+
   box-sizing: border-box;
 }
 .photo__gallery-popup {
@@ -43,7 +47,8 @@
 .photo__gallery-popup-content {
   padding-top: 200px;
   width: 100%;
-  max-width: 1903px;
+  margin: 0 auto;
+  max-width: 2903px;
   display: flex;
   align-items: center;
   justify-content: center;
