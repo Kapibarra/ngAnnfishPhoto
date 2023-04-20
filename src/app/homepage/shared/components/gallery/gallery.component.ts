@@ -230,6 +230,360 @@ export class GalleryComponent implements OnInit {
         },
       ],
     },
+    {
+      src: 'assets/series/08/01.jpg',
+      alt: 'Puck',
+      id: 8,
+      paddingRight: this.getRandomPadding(),
+      category: 'Fashion',
+      gridColumn: '3 / 5', // occupies columns 3, 4, and 5
+      gridRow: '1 / 3', // occupies rows 1 and 2
+      seriesPhotos: [
+        {
+          src: 'assets/series/08/01.jpg',
+        },
+        {
+          src: 'assets/series/08/02.jpg',
+        },
+        {
+          src: 'assets/series/08/03.jpg',
+        },
+        {
+          src: 'assets/series/08/04.jpg',
+        },
+        {
+          src: 'assets/series/08/05.jpg',
+        },
+        {
+          src: 'assets/series/08/06.jpg',
+        },
+        {
+          src: 'assets/series/08/07.jpg',
+        },
+        {
+          src: 'assets/series/08/08.jpg',
+        },
+      ],
+    },
+    {
+      src: 'assets/series/09/01.jpg',
+      alt: 'Puck',
+      id: 9,
+      paddingRight: this.getRandomPadding(),
+      category: 'Fashion',
+      gridColumn: '3 / 5', // occupies columns 3, 4, and 5
+      gridRow: '1 / 3', // occupies rows 1 and 2
+      seriesPhotos: [
+        {
+          src: 'assets/series/09/01.jpg',
+        },
+        {
+          src: 'assets/series/09/02.jpg',
+        },
+        {
+          src: 'assets/series/09/03.jpg',
+        },
+        {
+          src: 'assets/series/09/04.jpg',
+        },
+      ],
+    },
+    {
+      src: 'assets/series/10/01.jpg',
+      alt: 'Photo 10',
+      id: 10,
+      paddingRight: this.getRandomPadding(),
+      category: '1 / 3',
+      gridColumn: '1 / 3', // occupies columns 1 and 2
+      gridRow: '1 / 3', // occupies rows 1 and 2
+      seriesPhotos: [
+        {
+          src: 'assets/series/10/01.jpg',
+        },
+        {
+          src: 'assets/series/10/02.jpg',
+        },
+        {
+          src: 'assets/series/10/03.jpg',
+        },
+        {
+          src: 'assets/series/10/04.jpg',
+        },
+      ],
+    },
+    {
+      src: 'assets/series/11/01.jpg',
+      alt: 'Photo 11',
+      id: 11,
+      paddingRight: this.getRandomPadding(),
+      category: 'image',
+      gridColumn: '3 / 5', // occupies columns 3, 4, and 5
+      gridRow: '1 / 3', // occupies rows 1 and 2
+      seriesPhotos: [
+        {
+          src: 'assets/series/11/01.jpg',
+        },
+        {
+          src: 'assets/series/11/02.jpg',
+        },
+        {
+          src: 'assets/series/11/03.jpg',
+        },
+        {
+          src: 'assets/series/11/04.jpg',
+        },
+        {
+          src: 'assets/series/11/05.jpg',
+        },
+        {
+          src: 'assets/series/11/06.jpg',
+        },
+      ],
+    },
+    {
+      src: 'assets/series/12/01.jpg',
+      alt: 'Photo 12',
+      id: 12,
+      paddingRight: this.getRandomPadding(),
+      category: 'image',
+      gridColumn: '1 / 3', // occupies columns 1 and 2
+      gridRow: '3 / 5', // occupies rows 3, 4, and 5
+      seriesPhotos: [
+        {
+          src: 'assets/series/12/01.jpg',
+        },
+        {
+          src: 'assets/series/12/02.jpg',
+        },
+        {
+          src: 'assets/series/12/03.jpg',
+        },
+        {
+          src: 'assets/series/12/04.jpg',
+        },
+        {
+          src: 'assets/series/12/05.jpg',
+        },
+        {
+          src: 'assets/series/12/06.jpg',
+        },
+      ],
+    },
+    {
+      src: 'assets/series/13/01.jpg',
+      alt: 'Photo 13',
+      id: 13,
+      paddingRight: this.getRandomPadding(),
+      category: 'image',
+      gridColumn: '1 / 3', // occupies columns 1 and 2
+      gridRow: '3 / 5', // occupies rows 3, 4, and 5
+      seriesPhotos: [
+        {
+          src: 'assets/series/13/01.jpg',
+        },
+        {
+          src: 'assets/series/13/02.jpg',
+        },
+        {
+          src: 'assets/series/13/03.jpg',
+        },
+        {
+          src: 'assets/series/13/04.jpg',
+        },
+      ],
+    },
+    {
+      src: 'assets/series/14/01.jpg',
+      alt: 'Photo 14',
+      id: 13,
+      paddingRight: this.getRandomPadding(),
+      category: 'image',
+      gridColumn: '1 / 3', // occupies columns 1 and 2
+      gridRow: '3 / 5', // occupies rows 3, 4, and 5
+      seriesPhotos: [
+        {
+          src: 'assets/series/14/01.jpg',
+        },
+        {
+          src: 'assets/series/14/02.jpg',
+        },
+        {
+          src: 'assets/series/14/03.jpg',
+        },
+        {
+          src: 'assets/series/14/04.jpg',
+        },
+        {
+          src: 'assets/series/14/05.jpg',
+        },
+        {
+          src: 'assets/series/14/06.jpg',
+        },
+        {
+          src: 'assets/series/14/07.jpg',
+        },
+        {
+          src: 'assets/series/14/08.jpg',
+        },
+        {
+          src: 'assets/series/14/09.jpg',
+        },
+        {
+          src: 'assets/series/14/10.jpg',
+        },
+      ],
+    },
+    {
+      src: 'assets/series/15/01.jpg',
+      alt: 'Photo 15',
+      id: 15,
+      paddingRight: this.getRandomPadding(),
+      category: 'image',
+      gridColumn: '1 / 3', // occupies columns 1 and 2
+      gridRow: '3 / 5', // occupies rows 3, 4, and 5
+      seriesPhotos: [
+        {
+          src: 'assets/series/15/01.jpg',
+        },
+        {
+          src: 'assets/series/15/02.jpg',
+        },
+        {
+          src: 'assets/series/15/03.jpg',
+        },
+        {
+          src: 'assets/series/15/04.jpg',
+        },
+      ],
+    },
+    {
+      src: 'assets/series/16/01.jpg',
+      alt: 'Photo 16',
+      id: 16,
+      paddingRight: this.getRandomPadding(),
+      category: 'image',
+      gridColumn: '1 / 3', // occupies columns 1 and 2
+      gridRow: '3 / 5', // occupies rows 3, 4, and 5
+      seriesPhotos: [
+        {
+          src: 'assets/series/16/01.jpg',
+        },
+        {
+          src: 'assets/series/16/02.jpg',
+        },
+        {
+          src: 'assets/series/16/03.jpg',
+        },
+        {
+          src: 'assets/series/16/04.jpg',
+        },
+        {
+          src: 'assets/series/16/05.jpg',
+        },
+      ],
+    },
+    {
+      src: 'assets/series/17/01.jpg',
+      alt: 'Photo 17',
+      id: 17,
+      paddingRight: this.getRandomPadding(),
+      category: 'image',
+      gridColumn: '1 / 3', // occupies columns 1 and 2
+      gridRow: '3 / 5', // occupies rows 3, 4, and 5
+      seriesPhotos: [
+        {
+          src: 'assets/series/17/01.jpg',
+        },
+        {
+          src: 'assets/series/17/02.jpg',
+        },
+        {
+          src: 'assets/series/17/03.jpg',
+        },
+        {
+          src: 'assets/series/17/04.jpg',
+        },
+        {
+          src: 'assets/series/17/05.jpg',
+        },
+        {
+          src: 'assets/series/17/06.jpg',
+        },
+        {
+          src: 'assets/series/17/07.jpg',
+        },
+        {
+          src: 'assets/series/17/08.jpg',
+        },
+      ],
+    },
+    {
+      src: 'assets/series/18/01.jpg',
+      alt: 'Photo 18',
+      id: 18,
+      paddingRight: this.getRandomPadding(),
+      category: 'image',
+      gridColumn: '1 / 3', // occupies columns 1 and 2
+      gridRow: '3 / 5', // occupies rows 3, 4, and 5
+      seriesPhotos: [
+        {
+          src: 'assets/series/18/01.jpg',
+        },
+        {
+          src: 'assets/series/18/02.jpg',
+        },
+        {
+          src: 'assets/series/18/03.jpg',
+        },
+        {
+          src: 'assets/series/18/04.jpg',
+        },
+        {
+          src: 'assets/series/18/05.jpg',
+        },
+        {
+          src: 'assets/series/18/06.jpg',
+        },
+        {
+          src: 'assets/series/18/07.jpg',
+        },
+        {
+          src: 'assets/series/18/08.jpg',
+        },
+        {
+          src: 'assets/series/18/09.jpg',
+        },
+        {
+          src: 'assets/series/18/10.jpg',
+        },
+      ],
+    },
+    {
+      src: 'assets/series/19/01.jpg',
+      alt: 'Photo 19',
+      id: 19,
+      paddingRight: this.getRandomPadding(),
+      category: 'image',
+      gridColumn: '1 / 3', // occupies columns 1 and 2
+      gridRow: '3 / 5', // occupies rows 3, 4, and 5
+      seriesPhotos: [
+        {
+          src: 'assets/series/19/01.jpg',
+        },
+        {
+          src: 'assets/series/19/02.jpg',
+        },
+        {
+          src: 'assets/series/19/03.jpg',
+        },
+        {
+          src: 'assets/series/19/04.jpg',
+        },
+        {
+          src: 'assets/series/19/05.jpg',
+        },
+      ],
+    },
   ];
 
   loading: boolean = true;
