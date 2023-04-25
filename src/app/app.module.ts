@@ -12,6 +12,7 @@ import { HeaderComponent } from './homepage/shared/components/header/header.comp
 import { LoginComponent } from './homepage/shared/components/login/login.component';
 import { SwiperModule } from 'swiper/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CursorComponent } from './homepage/shared/components/cursor/cursor.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     FormComponent,
     LoginComponent,
+    CursorComponent,
   ],
   imports: [
     BrowserModule,
